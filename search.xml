@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>burp火狐代理证书的安装</title>
+      <link href="2021/04/18/burp%E4%BB%A3%E7%90%86%E8%AF%81%E4%B9%A6%E7%9A%84%E5%AE%89%E8%A3%85/"/>
+      <url>2021/04/18/burp%E4%BB%A3%E7%90%86%E8%AF%81%E4%B9%A6%E7%9A%84%E5%AE%89%E8%A3%85/</url>
+      
+        <content type="html"><![CDATA[<h1 id="burp火狐代理证书"><a href="#burp火狐代理证书" class="headerlink" title="burp火狐代理证书"></a>burp火狐代理证书</h1><p><code>首先先配置火狐代理 1、选项-网络设置</code></p><p><img src="https://img-blog.csdnimg.cn/20191225152242774.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpamlucWluZzM5,size_16,color_FFFFFF,t_70"></p><p>2.<code>firefox的证书设置</code></p><p><code>在firefox的url栏输入 http://burp</code></p><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE1LmNuYmxvZ3MuY29tL2Jsb2cvMTE0ODI3Ni8yMDE3MDcvMTE0ODI3Ni0yMDE3MDcyNTE2MzEzMDQ1OC0zNDA4NTY2ODUucG5n?x-oss-process=image/format,png"></p><p><code>点击 CA Certificate下载证书</code></p><p><img src="https://img-blog.csdnimg.cn/20191225152538306.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpamlucWluZzM5,size_16,color_FFFFFF,t_70"></p><p>下载完之后安装，导入证书</p><p>3.<strong>burpsuite的设置</strong></p><p> 用默认的就好了</p><p><img src="https://img-blog.csdnimg.cn/20191225152811317.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpamlucWluZzM5,size_16,color_FFFFFF,t_70"></p><p><code>将Intercept设置为 on</code></p><p><img src="https://images2015.cnblogs.com/blog/1148276/201707/1148276-20170725164126130-1755030311.png"></p><p><code>这样子就算设置好抓包了</code></p><p><img src="http://xiaofengsky.free.fr/upload/d62638d4cb6d4493c123f69ade81d456.jpg"></p><p><code>要快乐</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> kali </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> kali </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>第二阶段攻防</title>
       <link href="2021/04/18/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%94%BB%E9%98%B2%E6%80%9D%E8%B7%AF/"/>
       <url>2021/04/18/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%94%BB%E9%98%B2%E6%80%9D%E8%B7%AF/</url>
